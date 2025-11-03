@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "456879798511",
+    "project_id": "amityhackathon-2a57e",
+    "storage_bucket": "amityhackathon-2a57e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456879798511:android:6452eefa766ea0afb0031a",
+        "android_client_info": {
+          "package_name": "com.example.amityhackathonproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE9E8KuXyfGep7k3rmyHe96wtutND9vXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
