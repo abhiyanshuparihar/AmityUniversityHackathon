@@ -1,9 +1,8 @@
+import 'package:amityhackathonproject/Merchant%20Screens/Merchant%20Signup%20Screen/merchantSignupScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:iiitmprojectbakaya/Customer%20Screens/Customer%20Signup%20Screen/customerSignupScreen.dart';
-import 'package:iiitmprojectbakaya/Merchant%20Screens/Merchant%20Signup%20Screen/merchantSignupScreen.dart';
-import 'package:iiitmprojectbakaya/UI%20Helper/Colors/colors.dart';
-import 'package:iiitmprojectbakaya/UI%20Helper/Gradients/gradients.dart';
+import 'package:amityhackathonproject/UI%20Helper/Colors/colors.dart';
+import 'package:amityhackathonproject/UI%20Helper/Gradients/gradients.dart';
 
 class AccountTypeScreen extends StatefulWidget {
   @override
@@ -44,7 +43,6 @@ class _AccountTypeScreenState extends State<AccountTypeScreen>
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _fadeController, curve: Curves.easeInOut),
     );
-
     _slideAnimation = Tween<Offset>(
       begin: const Offset(0, 0.5),
       end: Offset.zero,
@@ -53,7 +51,6 @@ class _AccountTypeScreenState extends State<AccountTypeScreen>
     _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(
       CurvedAnimation(parent: _scaleController, curve: Curves.elasticOut),
     );
-
     _fadeController.forward();
     _slideController.forward();
     _scaleController.forward();
@@ -67,12 +64,12 @@ class _AccountTypeScreenState extends State<AccountTypeScreen>
     super.dispose();
   }
 
-  void _handleContinue() {
+  void _handleContinue(){
     HapticFeedback.lightImpact();
     // Navigate to the respective registration form
     if (_selectedAccountType == 'merchant') {
       Navigator.push(context, MaterialPageRoute(builder: (context) => MerchantRegistrationPage()));
-    } else {
+    }else {
       Navigator.push(context, MaterialPageRoute(builder: (context) => CustomerRegistrationPage()));
     }
   }

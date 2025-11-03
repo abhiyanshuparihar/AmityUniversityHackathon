@@ -1,17 +1,10 @@
+import 'package:amityhackathonproject/Merchant%20Screens/Home%20Screen%20Merchant/homeScreenMerchant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:iiitmprojectbakaya/Admin%20Screens/Home%20Screen%20Admin/homeScreenAdmin.dart';
-import 'package:iiitmprojectbakaya/Common%20Screens/Account%20Signup%20Selection%20Page/accountSignupSelectionPage.dart';
-import 'package:iiitmprojectbakaya/Customer%20Screens/Home%20Screen%20Customer/homeScreenCustomer.dart';
-import 'package:iiitmprojectbakaya/Distributers%20Screen/Distributer%20Home%20Screen/distributerHomeScreen.dart';
-import 'package:iiitmprojectbakaya/Manufacturer%20Screens/Manufacturer%20Home%20Screen/manufacturerHomeScreen.dart';
-import 'package:iiitmprojectbakaya/Merchant%20Screens/Home%20Screen%20Merchant/homeScreenMerchant.dart';
-import 'package:iiitmprojectbakaya/UI%20Helper/Colors/colors.dart';
-import 'package:iiitmprojectbakaya/UI%20Helper/Gradients/gradients.dart';
-import 'package:iiitmprojectbakaya/Warehousing%20Screens/Warehousing%20Home%20Screen/wareHousingHomeScreen.dart';
-import 'package:iiitmprojectbakaya/WholeSalers%20Screen/WholeSalers%20Home%20Screen/wholeSalersHomeScreen.dart';
+import 'package:amityhackathonproject/UI%20Helper/Colors/colors.dart';
+import 'package:amityhackathonproject/UI%20Helper/Gradients/gradients.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
