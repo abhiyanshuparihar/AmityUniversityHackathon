@@ -1,7 +1,11 @@
 import 'package:amityhackathonproject/Admin%20Screens/Home%20Screen%20Admin/homeScreenAdmin.dart';
 import 'package:amityhackathonproject/Common%20Screens/Login%20Screen/loginScreen.dart';
 import 'package:amityhackathonproject/Customer%20Screens/Home%20Screen%20Customer/homeScreenCustomer.dart';
+import 'package:amityhackathonproject/Distributers%20Screen/Distributer%20Home%20Screen/distributerHomeScreen.dart';
+import 'package:amityhackathonproject/Manufacturer%20Screens/Manufacturer%20Home%20Screen/manufacturerHomeScreen.dart';
 import 'package:amityhackathonproject/Merchant%20Screens/Home%20Screen%20Merchant/homeScreenMerchant.dart';
+import 'package:amityhackathonproject/Warehousing%20Screens/Warehousing%20Home%20Screen/wareHousingHomeScreen.dart';
+import 'package:amityhackathonproject/WholeSalers%20Screen/WholeSalers%20Home%20Screen/wholeSalersHomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

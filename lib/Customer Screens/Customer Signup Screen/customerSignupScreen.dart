@@ -1,3 +1,4 @@
+import 'package:amityhackathonproject/Customer%20Screens/Home%20Screen%20Customer/homeScreenCustomer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -109,13 +110,8 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
           if (role == "customer") {
             _showSuccessDialog(
               'Account Created Successfully!',
-              'Welcome ${userDoc['firstName']}! Your customer account has been created and you are now logged in.',
+              'Welcome ${userDoc['firstName']}! Your customer account has been created.',
             );
-            // Uncomment to navigate to home screen
-            // Navigator.pushReplacement(
-            //   context,
-            //   MaterialPageRoute(builder: (context) => HomeScreen()),
-            // );
           } else {
             _showErrorDialog(
               'Registration Error',
@@ -182,11 +178,7 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Colors.green.shade50, Colors.white],
-              ),
+              color: Colors.white,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -194,12 +186,12 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                 Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: Colors.green.shade100,
+                    gradient: MyGradients.blueGradient,
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
-                    Icons.check_circle,
-                    color: Colors.green.shade700,
+                    Icons.check_circle_outline,
+                    color: Colors.white,
                     size: 48,
                   ),
                 ),
@@ -209,7 +201,7 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: Colors.green.shade800,
+                    color: MyColors.blueColor,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -218,7 +210,7 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                   message,
                   style: TextStyle(
                     fontSize: 15,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey.shade600,
                     height: 1.5,
                   ),
                   textAlign: TextAlign.center,
@@ -228,22 +220,21 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                   width: double.infinity,
                   height: 50,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Colors.green.shade600, Colors.green.shade700],
-                    ),
+                    gradient: MyGradients.blueGradient,
                     borderRadius: BorderRadius.circular(12),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.green.withOpacity(0.3),
+                        color: MyColors.blueColor.withOpacity(0.3),
                         blurRadius: 8,
                         offset: Offset(0, 4),
                       ),
                     ],
                   ),
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: (){
                       Navigator.of(context).pop();
-                      // Optionally navigate to another screen
+                      // Navigate to Customer Home Page
+                      Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>CustomerHomeScreen()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
@@ -253,7 +244,7 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                       ),
                     ),
                     child: Text(
-                      'Continue',
+                      'Continue to Home',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -282,11 +273,7 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Colors.red.shade50, Colors.white],
-              ),
+              color: Colors.white,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -294,12 +281,12 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                 Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: Colors.red.shade100,
+                    color: MyColors.pinkColor.withOpacity(0.1),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
                     Icons.error_outline,
-                    color: Colors.red.shade700,
+                    color: MyColors.pinkColor,
                     size: 48,
                   ),
                 ),
@@ -309,7 +296,7 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: Colors.red.shade800,
+                    color: MyColors.blueColor,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -318,7 +305,7 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                   message,
                   style: TextStyle(
                     fontSize: 15,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey.shade600,
                     height: 1.5,
                   ),
                   textAlign: TextAlign.center,
@@ -331,12 +318,12 @@ class _CustomerRegistrationPageState extends State<CustomerRegistrationPage> wit
                         height: 50,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [Colors.red.shade600, Colors.red.shade700],
+                            colors: [MyColors.pinkColor, MyColors.pinkColor.withOpacity(0.8)],
                           ),
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.red.withOpacity(0.3),
+                              color: MyColors.pinkColor.withOpacity(0.3),
                               blurRadius: 8,
                               offset: Offset(0, 4),
                             ),

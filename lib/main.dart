@@ -1,3 +1,4 @@
+import 'package:amityhackathonproject/Common%20Screens/Splash%20Screen/splashScreen.dart';
 import 'package:amityhackathonproject/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Bakaya',
-        // home: SplashScreen()
+        home: SplashScreen()
     );
   }
 }
