@@ -1,3 +1,4 @@
+import 'package:amityhackathonproject/Customer%20Screens/Customer%20Signup%20Screen/customerSignupScreen.dart';
 import 'package:amityhackathonproject/Merchant%20Screens/Merchant%20Signup%20Screen/merchantSignupScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
